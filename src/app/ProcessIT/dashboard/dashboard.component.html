@@ -1,0 +1,360 @@
+<body class="barber_version">
+
+    
+
+    <div id="wrapper">
+
+        <!-- Sidebar-wrapper -->
+        <div id="sidebar-wrapper">
+			<div class="side-top">
+				<div class="logo-sidebar">
+					<a href=""><img src="assets/images/logos/LOGO.gif" alt="image"></a>
+				</div>
+				<ul class="sidebar-nav">
+                    <li><a routerLink="/clientprocessit" >Client page</a></li>
+                    <li><a routerLink="/addclient" >Process IT</a></li>
+                    <li><a  routerLink="/dashboard" class="active">Dashboard </a></li>
+                    <li><a  routerLink="/MA">Dashboard Comparative</a></li>
+                    
+                </ul>
+			</div>
+        </div>
+        <!-- End Sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <a href="#menu-toggle" class="menuopener" id="menu-toggle"><i class="fa fa-bars"></i></a>
+			
+            <div class="all-page-bar" style="background-image:url('assets/uploads/background.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="title title-1 text-center">
+								<div class="title--heading">
+									<h1>Dashboard Page</h1>
+								</div>
+								<div class="clearfix"></div>
+								<ol class="breadcrumb">
+									<li><a href=""></a></li>
+									<li class="active"></li>
+								</ol>
+								<div class="much">
+									
+								</div>
+							</div>
+							<!-- .title end -->
+						</div>
+					</div>
+				</div>
+			</div><!-- end all-page-bar -->
+
+            <section class="section nopad cac text-center">
+                <a href="#"></a>
+            </section>
+
+            <div id="appointment" class="section wb">
+                <div class="container-fluid">
+                    <table class="table table-hover">
+                        <tr>
+                            <th class="tname"></th>
+                            <th class="tage"></th>
+                            <th class="tage"></th>
+                            
+                        </tr>
+                        <tr *ngFor="let list of service.listITGC">
+                            <td>{{list.Date}}</td>
+                            <td >{{list.MCCD01}}</td>
+                            <td >{{list.MCCD02}}</td>
+                            <td >{{list.MCCD03}}</td>
+                            <td >{{list.MCCD04}}</td>
+                            <td >{{list.MCCD05}}</td>
+                            <td >{{list.MCCI01}}</td>
+                            <td >{{list.MCCI02}}</td>
+                            <td >{{list.MCCI03}}</td>
+                            <td >{{list.MCCI04}}</td>
+                            <td >{{list.MCCI05}}</td>
+
+
+                            <td >{{list.MACD01}}</td>
+                            <td >{{list.MACD02}}</td>
+                            <td >{{list.MACD03}}</td>
+                            <td >{{list.MACD04}}</td>
+                            <td >{{list.MACD05}}</td>
+                            <td >{{list.MACD06}}</td>
+                            <td >{{list.MACI01}}</td>
+                            <td >{{list.MACI02}}</td>
+                            <td >{{list.MACI03}}</td>
+                            <td >{{list.MACI04}}</td>
+                            <td >{{list.MACI05}}</td>
+                            <td >{{list.MACI06}}</td>
+
+
+                            <td >{{list.MOCD01}}</td>
+                            <td >{{list.MOCD02}}</td>
+                            <td >{{list.MOCD03}}</td>
+                            <td >{{list.MOCI01}}</td>
+                            <td >{{list.MOCI02}}</td>
+                            <td >{{list.MOCI03}}</td>
+                            
+                            
+                        </tr>
+                        
+                    </table>
+                    
+                    
+                    
+                
+                
+                            <div class="col-md-12">
+                                <div class="section-heading">
+                                    <h2>Tableau de bord </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+
+
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body">
+                                          Effectif
+                                          
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                    
+                               
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    
+                                        <div class="card bg-warning text-white shadow">
+                                          <div class="card-body">
+                                            Effectif avec recommandation
+                                            
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7</div>
+                                          </div>
+                                        </div>
+                                    
+                                </div>
+                                
+                    
+                                <!-- Pending Requests Card Example -->
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    
+                                        <div class="card bg-danger text-white shadow">
+                                          <div class="card-body">
+                                            Ineffectif
+                                            
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                          </div>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-xl-3 col-md-6 mb-4">
+                                    
+                                    
+                                        <div class="card bg-secondary text-white shadow">
+                                          <div class="card-body">
+                                            Non Testé
+                                            
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                          </div>
+                                        </div>
+                                      
+                                </div>
+                            </div>
+                            <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                <p style="color: #ffff;">_______________________________________</p>
+                            </DIV>
+                        <div class="wrapper col-xs-12 col-sm-12 col-md-12" >
+                             <div >
+                                    <h2>Gestion des Accès </h2>
+                            </div>
+                            <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow col-xs-12 col-sm-12 col-md-12">
+                                  <h4 class="m-0 font-weight-bold text-primary">Rèsultat de la synthése</h4>
+                                  
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body col-xs-12 col-sm-12 col-md-12">
+                                    <div id="chart" >
+                                        <apx-chart
+                                        [series]="PiechartOptions.series"
+                                        [chart]="PiechartOptions.chart"
+                                        [labels]="PiechartOptions.labels"
+                                        [responsive]="PiechartOptions.responsive"
+                                        [colors]="PiechartOptions.colors"
+
+                                        ></apx-chart>
+                                    </div>
+                                    <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                        <p style="color: #ffff;">_______________________________________</p>
+                                    </DIV>
+                                </div>
+                              </div>
+                              <DIV class="col-xs-2 col-sm-2 col-md-2">
+
+                            </DIV>
+                              <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow ">
+                                  <h4 class="m-0 font-weight-bold text-primary">Score</h4>
+                                  
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div id="chart" >
+                                        <apx-chart
+                                        [series]="RadialbarchartOptions.series"
+                                        [chart]="RadialbarchartOptions.chart"
+                                        [plotOptions]="RadialbarchartOptions.plotOptions"
+                                        [labels]="RadialbarchartOptions.labels"
+                                        [colors]="RadialbarchartOptions.colors"
+                                        
+                                        ></apx-chart>
+                                    </div>
+                                </div>
+                              </div>     
+                        </div>
+                        <DIV class="col-xs-5 col-sm-5 col-md-5">
+                            <p style="color: #ffff;">_______________________________________</p>
+                        </DIV>
+                    <div class="wrapper col-xs-12 col-sm-12 col-md-12" >
+                         <div >
+                                <h2>Gestion des Changements </h2>
+                        </div>
+                        <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow col-xs-12 col-sm-12 col-md-12">
+                              <h4 class="m-0 font-weight-bold text-primary">Rèsultat de la synthése</h4>
+                              
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body col-xs-12 col-sm-12 col-md-12">
+                                <div id="chart" >
+                                    <apx-chart
+                                    [series]="PiechartOptions.series"
+                                    [chart]="PiechartOptions.chart"
+                                    [labels]="PiechartOptions.labels"
+                                    [responsive]="PiechartOptions.responsive"
+                                    [colors]="PiechartOptions.colors"
+
+                                    ></apx-chart>
+                                </div>
+                                <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                    <p style="color: #ffff;">_______________________________________</p>
+                                </DIV>
+                            </div>
+                          </div>
+                          <DIV class="col-xs-2 col-sm-2 col-md-2">
+
+                        </DIV>
+                          <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow ">
+                              <h4 class="m-0 font-weight-bold text-primary">Score</h4>
+                              
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div id="chart" >
+                                    <apx-chart
+                                    [series]="RadialbarchartOptions.series"
+                                    [chart]="RadialbarchartOptions.chart"
+                                    [plotOptions]="RadialbarchartOptions.plotOptions"
+                                    [labels]="RadialbarchartOptions.labels"
+                                    [colors]="RadialbarchartOptions.colors"
+                                    
+                                    ></apx-chart>
+                                </div>
+                            </div>
+                          </div>     
+                    </div>
+                    <DIV class="col-xs-5 col-sm-5 col-md-5">
+                        <p style="color: #ffff;">_______________________________________</p>
+                    </DIV>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-12" >
+                     <div >
+                            <h2>Gestion des Opérations </h2>
+                    </div>
+                    <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow col-xs-12 col-sm-12 col-md-12">
+                          <h4 class="m-0 font-weight-bold text-primary">Rèsultat de la synthése</h4>
+                          
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body col-xs-12 col-sm-12 col-md-12">
+                            <div id="chart" >
+                                <apx-chart
+                                [series]="PiechartOptions.series"
+                                [chart]="PiechartOptions.chart"
+                                [labels]="PiechartOptions.labels"
+                                [responsive]="PiechartOptions.responsive"
+                                [colors]="PiechartOptions.colors"
+
+                                ></apx-chart>
+                            </div>
+                            <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                <p style="color: #ffff;">_______________________________________</p>
+                            </DIV>
+                        </div>
+                      </div>
+                      <DIV class="col-xs-2 col-sm-2 col-md-2">
+
+                    </DIV>
+                      <div class="card shadow col-xs-6 col-sm-6 col-md-6">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between shadow ">
+                          <h4 class="m-0 font-weight-bold text-primary">Score</h4>
+                          
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div id="chart" >
+                                <apx-chart
+                                [series]="RadialbarchartOptions.series"
+                                [chart]="RadialbarchartOptions.chart"
+                                [plotOptions]="RadialbarchartOptions.plotOptions"
+                                [labels]="RadialbarchartOptions.labels"
+                                [colors]="RadialbarchartOptions.colors"
+                                
+                                ></apx-chart>
+                            </div>
+                        </div>
+                      </div>     
+                </div>
+                
+                 
+            </div><!-- end section -->
+            </div>
+
+           
+
+            <div class="copyrights">
+                <div class="container-fluid">
+                    <div class="footer-distributed">
+                        <div class="footer-left">
+                            <p class="footer-links">
+                                <a href="#">Client Page</a>
+                                <a href="#">Process IT</a>
+                                <a href="#">Dashboard comparative</a>
+                               
+                            </p>
+                           
+                        </div>
+
+                        <div class="footer-right">
+                            
+                        </div>
+                    </div>
+                </div><!-- end container -->
+            </div><!-- end copyrights -->
+        </div>
+    </div><!-- end wrapper -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+  
+</body>

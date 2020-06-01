@@ -1,0 +1,247 @@
+<body class="barber_version">
+
+    
+
+    <div id="wrapper">
+
+        <!-- Sidebar-wrapper -->
+        <div id="sidebar-wrapper">
+			<div class="side-top">
+				<div class="logo-sidebar">
+					<a href=""><img src="assets/images/logos/LOGO.gif" alt="image"></a>
+				</div>
+				<ul class="sidebar-nav">
+                    <li><a routerLink="/clientprocessit" >Client page</a></li>
+                    <li><a routerLink="/addclient" >Process IT</a></li>
+                    <li><a  routerLink="/dashboard" >Dashboard </a></li>
+                    <li><a  routerLink="/MA" class="active">Dashboard Comparative</a></li>
+                    
+                </ul>
+			</div>
+        </div>
+        <!-- End Sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <a href="#menu-toggle" class="menuopener" id="menu-toggle"><i class="fa fa-bars"></i></a>
+			
+            <div class="all-page-bar" style="background-image:url('assets/uploads/background.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="title title-1 text-center">
+								<div class="title--heading">
+									<h1>Dashboard Page</h1>
+								</div>
+								<div class="clearfix"></div>
+								<ol class="breadcrumb">
+									<li><a href=""></a></li>
+									<li class="active"></li>
+								</ol>
+								<div class="much">
+									
+								</div>
+							</div>
+							<!-- .title end -->
+						</div>
+					</div>
+				</div>
+			</div><!-- end all-page-bar -->
+
+            <section class="section nopad cac text-center">
+                <a href="#"></a>
+            </section>
+
+            <div id="appointment" class="section wb">
+                <div class="container-fluid">
+                    
+                    
+                    
+                
+                <div class="tabs-content" id="recommended-hotel">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-heading">
+                                    <h2>Tableau de bord comparative</h2>
+                                </div>
+                            </div>
+
+                           
+                                    <div class="row">
+                                    
+                                        <div class="wrapper">
+                                            <div class="col-md-12">
+                                                 
+                                                <div class="weather-content">
+                                                    <div class="row ">
+                                                        <div>
+                                                            <div class="col-md-12">
+                                                                <ul class="tabs clearfix" data-tabgroup="second-tab-group">
+                                                                    <li><a href="#MA" class="active">Management Access</a></li>
+                                                                    <li><a href="#MC">Management Change</a></li>
+                                                                    <li><a href="#MO">Management Operation</a></li>
+                                                                
+                                                                </ul>    
+                                                            </div>  
+                                                        </div>
+                                                        
+                                                       
+                                                        <div class="col-md-12">
+                                                            <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                                            </DIV>
+                                                            <DIV class="col-xs-5 col-sm-5 col-md-5">
+                                                            </DIV>
+                                                            <section id="second-tab-group" class="weathergroup ">
+                                                                
+                                                                <div id="MA" >
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="BarchartOptions1.series"
+                                                                              [chart]="BarchartOptions1.chart"
+                                                                              [dataLabels]="BarchartOptions1.dataLabels"
+                                                                              [plotOptions]="BarchartOptions1.plotOptions"
+                                                                              [xaxis]="BarchartOptions1.xaxis"
+                                                                              [stroke]="BarchartOptions1.stroke"
+                                                                              [fill]="BarchartOptions1.fill"
+                                                                              [yaxis]="BarchartOptions1.yaxis"
+                                                                              [title]="BarchartOptions1.title"
+                                                                              [tooltip]="BarchartOptions1.tooltip"
+                                                                              [legend]="BarchartOptions1.legend"
+                                                                              [colors]="BarchartOptions1.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                          
+                                                                    </div>
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="RadarchartOptions1.series"
+                                                                              [chart]="RadarchartOptions1.chart"
+                                                                              [xaxis]="RadarchartOptions1.xaxis"
+                                                                              [stroke]="RadarchartOptions1.stroke"
+                                                                              [markers]="RadarchartOptions1.markers"
+                                                                              [fill]="RadarchartOptions1.fill"
+                                                                              [title]="RadarchartOptions1.title"
+                                                                              [colors]="RadarchartOptions1.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="MC">
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="BarchartOptions2.series"
+                                                                              [chart]="BarchartOptions2.chart"
+                                                                              [dataLabels]="BarchartOptions2.dataLabels"
+                                                                              [plotOptions]="BarchartOptions2.plotOptions"
+                                                                              [xaxis]="BarchartOptions2.xaxis"
+                                                                              [stroke]="BarchartOptions2.stroke"
+                                                                              [fill]="BarchartOptions2.fill"
+                                                                              [yaxis]="BarchartOptions2.yaxis"
+                                                                              [title]="BarchartOptions2.title"
+                                                                              [tooltip]="BarchartOptions2.tooltip"
+                                                                              [legend]="BarchartOptions2.legend"
+                                                                              [colors]="BarchartOptions2.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                          
+                                                                    </div>
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="RadarchartOptions2.series"
+                                                                              [chart]="RadarchartOptions2.chart"
+                                                                              [xaxis]="RadarchartOptions2.xaxis"
+                                                                              [stroke]="RadarchartOptions2.stroke"
+                                                                              [markers]="RadarchartOptions2.markers"
+                                                                              [fill]="RadarchartOptions2.fill"
+                                                                              [title]="RadarchartOptions2.title"
+                                                                              [colors]="RadarchartOptions2.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="MO">
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="BarchartOptions3.series"
+                                                                              [chart]="BarchartOptions3.chart"
+                                                                              [dataLabels]="BarchartOptions3.dataLabels"
+                                                                              [plotOptions]="BarchartOptions3.plotOptions"
+                                                                              [xaxis]="BarchartOptions3.xaxis"
+                                                                              [stroke]="BarchartOptions3.stroke"
+                                                                              [fill]="BarchartOptions3.fill"
+                                                                              [yaxis]="BarchartOptions3.yaxis"
+                                                                              [title]="BarchartOptions3.title"
+                                                                              [tooltip]="BarchartOptions3.tooltip"
+                                                                              [legend]="BarchartOptions3.legend"
+                                                                              [colors]="BarchartOptions3.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                          
+                                                                    </div>
+                                                                    <div class="text-content col-md-6">
+                                                                        <div id="chart">
+                                                                            <apx-chart
+                                                                              [series]="RadarchartOptions3.series"
+                                                                              [chart]="RadarchartOptions3.chart"
+                                                                              [xaxis]="RadarchartOptions3.xaxis"
+                                                                              [stroke]="RadarchartOptions3.stroke"
+                                                                              [markers]="RadarchartOptions3.markers"
+                                                                              [fill]="RadarchartOptions3.fill"
+                                                                              [title]="RadarchartOptions3.title"
+                                                                              [colors]="RadarchartOptions3.colors"
+                                                                            ></apx-chart>
+                                                                          </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div><!-- end container -->    
+            </div><!-- end section -->
+            </div>
+
+           
+
+            <div class="copyrights">
+                <div class="container-fluid">
+                    <div class="footer-distributed">
+                        <div class="footer-left">
+                            <p class="footer-links">
+                                <a href="#">Client Page</a>
+                                <a href="#">Process IT</a>
+                                <a href="#">Dashboard comparative</a>
+                               
+                            </p>
+                           
+                        </div>
+
+                        <div class="footer-right">
+                            
+                        </div>
+                    </div>
+                </div><!-- end container -->
+            </div><!-- end copyrights -->
+        </div>
+    </div><!-- end wrapper -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+  
+</body>

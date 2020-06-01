@@ -1,0 +1,266 @@
+
+<body class="barber_version">
+
+    
+
+    <div id="wrapper">
+
+        <!-- Sidebar-wrapper -->
+        <div id="sidebar-wrapper">
+			<div class="side-top">
+				<div class="logo-sidebar">
+					<a href=""><img src="assets/images/logos/LOGO.gif" alt="image"></a>
+				</div>
+				<ul class="sidebar-nav">
+					<li><a routerLink="/clientprocessit" >Client page</a></li>
+					<li><a routerLink="/ProcessIT" class="active">Process IT</a></li>
+					
+					<li><a  routerLink="">Dashboard Comparative</a></li>
+					
+				</ul>
+			</div>
+        </div>
+        <!-- End Sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <a href="#menu-toggle" class="menuopener" id="menu-toggle"><i class="fa fa-bars"></i></a>
+			
+            <div class="all-page-bar" style="background-image:url('assets/uploads/background.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="title title-1 text-center">
+								<div class="title--heading">
+									<h1>Process IT</h1>
+								</div>
+								<div class="clearfix"></div>
+								<ol class="breadcrumb">
+									
+								</ol>
+								<div class="much">
+									
+								</div>
+							</div>
+							<!-- .title end -->
+						</div>
+					</div>
+				</div>
+			</div><!-- end all-page-bar -->
+
+            <section class="section nopad cac text-center">
+                <a href="#"></a>
+            </section>
+
+            <div id="appointment" class="section wb">
+                <div class="container-fluid">
+                    <div class="section-title row text-center">
+                        <div class="col-md-8 col-md-offset-2">
+                        
+                           <h3 style="color: black;">Process IT</h3> 
+                        <hr class="grd1">
+                        
+                        </div>
+                    </div><!-- end title -->
+
+                    
+						
+                        <div class="col-md-12">
+                            <div class="contact_form">
+                               
+                            <div class="tabs-content" id="weather">
+                                <div class="container">
+                                    <div class="row">
+                                    
+                                        <div class="wrapper">
+                                            <div class="col-md-12">
+                                                <div class="weather-content">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <ul class="tabs clearfix" data-tabgroup="second-tab-group">
+                                                                <li><a routerLink="/MA" >Management Access</a></li>
+                                                                <li><a routerLink="/MC">Management Change</a></li>
+                                                                <li><a routerLink="/MO" class="active">Management Operation</a></li>
+                                                            
+                                                            </ul>    
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <section id="second-tab-group" class="weathergroup">
+                                                                <div id="MO">
+<div class="row">
+                                                                        
+    <form #form="ngForm" autocomplete="off" *ngIf="service.formData" class="row" (submit)="onSubmit(form)">
+        <input type="hidden" name="Clientname" [value]="service.formData.Clientname">
+        <input type="hidden" name="IdMO" [value]="service.formData.IdMO">
+        
+        <fieldset class="row-fluid">
+        
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                <h5 style="color: aliceblue;">Sous Process-IT</h5>
+                <input type="text" name="MO-C01" id="email" class="form-control" placeholder="MO-C01:  La sauvegarde et la restauration  "readonly>   
+            </div>
+            <div class="col-md-2">
+                <h5 style="color: aliceblue;">Contrôle design</h5>
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCD01" #MOCD01="ngModel" [(ngModel)]="service.formData.MOCD01" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <h5 style="color: aliceblue;">Contrôle implémentation</h5>
+                
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCI01" #MOCI01="ngModel" [(ngModel)]="service.formData.MOCI01" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                <input type="text" name="MO-C02" id="email" class="form-control" placeholder="MO-C02:  Les contrôles des tâches planifiées"readonly>   
+            </div>
+            <div class="col-md-2">
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCD02" #MOCD02="ngModel" [(ngModel)]="service.formData.MOCD02" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCI02" #MOCI02="ngModel" [(ngModel)]="service.formData.MOCI02" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                <input type="text" name="MO-C03" id="email" class="form-control" placeholder="MO-C03:   Les incidents"readonly>   
+            </div>
+            <div class="col-md-2">
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCD03" #MOCD03="ngModel" [(ngModel)]="service.formData.MOCD03" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                
+                <label class="sr-only">Selectionner un contrôle</label>
+                <select matNativeControl id="select_service" class=" form-control" data-style="btn-white" name="MOCI03" #MOCI03="ngModel" [(ngModel)]="service.formData.MOCI03" required>
+                    <option value="Effectif" style="color: green;">Effectif</option>
+                    <option value="EffectifavecR" style="color:yellow">Effectif avec remarque</option>
+                    <option value="Ineffectif" style="color:tomato;">Ineffectif</option>
+                </select>
+            </div>
+            
+    
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block subt">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    
+</div>
+                                                                </div>                         
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!-- end col -->
+
+</div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('uploads/parallax_20.jpg');">
+<div class="container-fluid">
+<div class="section-title row text-center">
+<div class="col-md-8 col-md-offset-2">
+
+<h3>Tableau de bord</h3>
+<hr class="grd1">
+
+</div>
+</div><!-- end title -->
+
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="testi-carousel owl-carousel owl-theme owl-loaded owl-drag">                                
+
+<!-- end testimonial -->
+
+<!-- end testimonial -->
+
+<!-- end testimonial -->
+
+<!-- end testimonial -->
+<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 1875px;"><div class="owl-item active" style="width: 595px; margin-right: 30px;"><div class="testimonial clearfix col-md-12 col-sm-12">
+<div class="desc">
+<h3><i class="fa fa-quote-left"></i> Tableau de bord Management Access</h3>
+
+
+<figure class="highcharts-figure">
+<div id="con">
+
+
+</div>
+
+
+</figure>
+</div>
+
+</div></div><div class="owl-item active" style="width: 595px; margin-right: 30px;"><div class="testimonial clearfix">
+<div class="desc">
+<h3><i class="fa fa-quote-left"></i> Tableau de bord Management Change</h3>
+
+<figure class="highcharts-figure">
+<div id="con"></div>
+
+</figure>
+</div>
+<!-- end testi-meta -->
+</div></div><div class="owl-item" style="width: 595px; margin-right: 30px;"><div class="testimonial clearfix">
+<div class="desc">
+<h3><i class="fa fa-quote-left"></i> Tableau de bord Management Operation</h3>
+
+<figure class="highcharts-figure">
+<div id="con"></div>
+
+</figure>
+</div>
+<!-- end testi-meta -->
+</div></div></div></div>
+<div class="owl-nav"><div class="owl-prev active"><i class="fa fa-angle-left effect-1"></i></div><div class="owl-next"><i class="fa fa-angle-right effect-1"></i></div></div>
+<div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div>
+</div><!-- end carousel -->
+</div><!-- end col -->
+</div><!-- end row -->
+</div><!-- end container -->
+</div><!-- end section -->
+
+<div class="copyrights">
+<div class="container-fluid">
+<div class="footer-distributed">
+<div class="footer-left">
+
+</div>
+
+<div class="footer-right">
+
+</div>
+</div>
+</div><!-- end container -->
+</div><!-- end copyrights -->
+</div>
+</div><!-- end wrapper -->
+
+<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+
+</body>
