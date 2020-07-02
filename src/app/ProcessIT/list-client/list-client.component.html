@@ -1,38 +1,13 @@
-<div class="col-xs-12 col-sm-12 col-md-12">
-							    <div class="title title-1 text-center col-xs-8 col-sm-8 col-md-8">
-								      <div class="title--heading">
-                <h1>Liste des clients ajoutés</h1>
-                </div>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4">
-                <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Chercher un Client" name="search"
-                    [(ngModel)]="searchText">
-                </form>
-            </div>
-</div>
-<table class="table table-hover">
-    <tr>
-        <th class="tname">Clientname</th>
-        <th class="tage">Engagement</th>
-        <th class="tage">ERP</th>
-        
-    </tr>
+<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in with Angular 7!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
 
-    
 
-    <tr *ngFor="let e of service.list">
-        <td (click)="populateForm(e)">{{e.Clientname}}</td>
-        <td (click)="populateForm(e)">{{e.Password}}</td>
-        <td (click)="populateForm(e)">{{e.ERP}}</td>
-        
-    </tr>
-    
-</table>
-<div class="col-xs-12 col-sm-12 col-md-12">
-    <i></i>
-    <select class="col-xs-10 col-sm-10 col-md-10">
-        <option *ngFor="let e of service.list" (click)="populateForm(e)">
-            {{e.Clientname}}</option>
-    </select>        
-    </div>  
+
+

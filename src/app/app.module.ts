@@ -22,6 +22,13 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import {ChartsModule} from 'ng2-charts';
 import { NgApexchartsModule} from 'ng-apexcharts' ;
 import { DashboardComponent } from './ProcessIT/dashboard/dashboard.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import { RegisterComponent } from './register';
+import { LoginComponent } from './login';
+import { AlertComponent } from './_components/alert.component';
+import { HomeComponent } from './home';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+
 
 
 @NgModule({
@@ -36,10 +43,15 @@ import { DashboardComponent } from './ProcessIT/dashboard/dashboard.component';
     AddClientComponent,
     ClientprocessitComponent,
     DashboardComponent,
+    RegisterComponent,
+    LoginComponent,
+    AlertComponent,
+    HomeComponent
     
     
   ],
   imports: [
+    Ng2SearchPipeModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -53,7 +65,9 @@ import { DashboardComponent } from './ProcessIT/dashboard/dashboard.component';
     
 
   ],
-  providers: [ClientService, MAService, MOService, MCService
+  providers: [ClientService, MAService, MOService, MCService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     
 ],
   bootstrap: [AppComponent]

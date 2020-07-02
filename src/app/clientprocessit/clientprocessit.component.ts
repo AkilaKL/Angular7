@@ -14,10 +14,14 @@ import { AddClient } from '../shared/add-client.model';
 })
 export class ClientprocessitComponent implements OnInit {
 
-  constructor(public router: Router, public service: AddClientService, public clientservice: ClientService) { }
+  constructor(public router: Router, public service: AddClientService, public clientservice: ClientService) {
+    this.clientservice.getClients().toPromise().then(res =>this.clients = res as Client[]);
+   }
+  clients:Client[];
   processitlist:AddClient;
-  client:ClientService;
-  clientname: '';
+  client: Client
+   
+  
   ngOnInit(): void {
     
 
@@ -26,11 +30,16 @@ export class ClientprocessitComponent implements OnInit {
     
   }
 
- getClient(Clientname: string){
-  this.clientservice.getClient(this.clientname).toPromise().then(res =>{this.client= res as ClientService},
-    err=>{console.log(err);
-    }
-    );
+ getClt(Password:string){
+  this.clientservice.getClt(Password).toPromise().then( 
+    res =>{this.client = res as Client
+      ;
+      
+      console.log(res);
+    },
+
+       )
+  
  
   
  }

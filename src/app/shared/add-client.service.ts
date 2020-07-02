@@ -9,20 +9,20 @@ import { AddClient } from './add-client.model';
 })
 export class AddClientService {
   
-  readonly rootURL = 'http://localhost:61191/api';
+  readonly rootURL = 'http://localhost:62933/api';
   formData:AddClient
   listITGC:AddClient[];
 
   constructor(private http:HttpClient) { }
   postAddClient(formData:AddClient){
 
-    return this.http.post(this.rootURL+'/AddClient',formData);
+    return this.http.post(this.rootURL+'/ProcessITs/Post',formData);
   
   }
   
   getAddClient(){
 
-    return this.http.get(this.rootURL+'/AddClient');
+    return this.http.get(this.rootURL+'/ProcessITs');
    }
    
 }

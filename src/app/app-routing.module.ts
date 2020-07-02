@@ -8,6 +8,9 @@ import { MOComponent } from './ProcessIT/mo/mo.component';
 import { ClientprocessitComponent } from './clientprocessit/clientprocessit.component';
 import { AddClientComponent } from './ProcessIT/add-client/add-client.component';
 import { DashboardComponent } from './ProcessIT/dashboard/dashboard.component';
+import { LoginComponent } from './login';
+import { RegisterComponent } from './register';
+import { HomeComponent } from './home';
 
 
 
@@ -15,14 +18,34 @@ import { DashboardComponent } from './ProcessIT/dashboard/dashboard.component';
 const routes: Routes = [
   {path: '' ,redirectTo:'MC',pathMatch: 'full'},
   {path:'ProcessIT',component: ProcessITComponent},
-  {path:'addclient',component: AddClientComponent},
+  
   {path:'clientprocessit', component: ClientprocessitComponent},
   {path:'client', component: ClientComponent },
-  {path:'dashboard', component: DashboardComponent },
   
-  {path:'MA', component: MAComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  
+  
   {path:'MC', component: MCComponent},
   {path:'MO', component: MOComponent},
+  { path: 'home',
+    component: HomeComponent, // this is the component with the <router-outlet> in the template
+    children: [
+      {
+        path: 'addclient', // child route path
+        component: AddClientComponent // child route component that the router renders
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent // another child route component that the router renders
+      },
+      {
+        path: 'dashboardComparative',
+        component: MAComponent // another child route component that the router renders
+      }
+    ] },
+ 
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/shared/client.model';
 import { ClientService } from 'src/app/shared/client.service';
+import { UserService, AuthenticationService } from 'src/app/_services';
+import { User } from 'src/app/_models';
+import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-list-client',
@@ -9,24 +13,49 @@ import { ClientService } from 'src/app/shared/client.service';
 })
 export class ListClientComponent implements OnInit {
   clients: Client[];
-
+  Clientname:string;
+  search;
+  currentUserSubscription: Subscription;
+  currentUser: User;
+  users: User[] = [];
       
  
 
-  constructor(public service:ClientService) { 
-    this.service.getClients().toPromise().then(res =>this.clients = res as Client[]);
-  }
+ 
 
-  ngOnInit(): void {
-    this.service.refreshList();
+    constructor(
+        private authenticationService: AuthenticationService,
+        private userService: UserService
+    ) {
+        
+    }
+
+    ngOnInit() {
+        this.loadAllUsers();
+    }
+
+    ngOnDestroy() {
+        // unsubscribe to ensure no memory leaks
+        this.currentUserSubscription.unsubscribe();
+    }
+
+    deleteUser(id: number) {
+        this.userService.delete(id).pipe(first()).subscribe(() => {
+            this.loadAllUsers()
+        });
+    }
+
+    private loadAllUsers() {
+      this.userService.getAll().pipe(first()).subscribe(users => {
+          this.users = users;
+      });
   }
-  searchText = ""
   
-  populateForm(e:Client)
+  populateForm(e:User)
   {
     
-    this.service.formData = Object.assign({},e);
-    this.service.formData.addNewRecord=false;
+    this.userService.formData = Object.assign({},e);
+    
   }
   
     

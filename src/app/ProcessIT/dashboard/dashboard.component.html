@@ -11,10 +11,10 @@
 					<a href=""><img src="assets/images/logos/LOGO.gif" alt="image"></a>
 				</div>
 				<ul class="sidebar-nav">
-                    <li><a routerLink="/clientprocessit" >Client page</a></li>
-                    <li><a routerLink="/addclient" >Process IT</a></li>
-                    <li><a  routerLink="/dashboard" class="active">Dashboard </a></li>
-                    <li><a  routerLink="/MA">Dashboard Comparative</a></li>
+          <li><a routerLink="/home" >Client page</a></li>
+          
+          <li><a  routerLink="../dashboard" class="active">Dashboard </a></li>
+          <li><a  routerLink="../dashboardComparative">Dashboard Comparative</a></li>
                     
                 </ul>
 			</div>
@@ -50,52 +50,21 @@
 
             <section class="section nopad cac text-center">
                 <a href="#"></a>
-            </section>
 
+
+            </section>
+            
             <div id="appointment" class="section wb">
                 <div class="container-fluid">
                     <table class="table table-hover">
+                      
+                        
                         <tr>
-                            <th class="tname"></th>
-                            <th class="tage"></th>
-                            <th class="tage"></th>
+                          Detail de la Synthese: 
+                          {{Synthese}}
+                             
                             
-                        </tr>
-                        <tr *ngFor="let list of service.listITGC">
-                            <td>{{list.Date}}</td>
-                            <td >{{list.MCCD01}}</td>
-                            <td >{{list.MCCD02}}</td>
-                            <td >{{list.MCCD03}}</td>
-                            <td >{{list.MCCD04}}</td>
-                            <td >{{list.MCCD05}}</td>
-                            <td >{{list.MCCI01}}</td>
-                            <td >{{list.MCCI02}}</td>
-                            <td >{{list.MCCI03}}</td>
-                            <td >{{list.MCCI04}}</td>
-                            <td >{{list.MCCI05}}</td>
-
-
-                            <td >{{list.MACD01}}</td>
-                            <td >{{list.MACD02}}</td>
-                            <td >{{list.MACD03}}</td>
-                            <td >{{list.MACD04}}</td>
-                            <td >{{list.MACD05}}</td>
-                            <td >{{list.MACD06}}</td>
-                            <td >{{list.MACI01}}</td>
-                            <td >{{list.MACI02}}</td>
-                            <td >{{list.MACI03}}</td>
-                            <td >{{list.MACI04}}</td>
-                            <td >{{list.MACI05}}</td>
-                            <td >{{list.MACI06}}</td>
-
-
-                            <td >{{list.MOCD01}}</td>
-                            <td >{{list.MOCD02}}</td>
-                            <td >{{list.MOCD03}}</td>
-                            <td >{{list.MOCI01}}</td>
-                            <td >{{list.MOCI02}}</td>
-                            <td >{{list.MOCI03}}</td>
-                            
+                           
                             
                         </tr>
                         
@@ -118,7 +87,7 @@
                                         <div class="card-body">
                                           Effectif
                                           
-                                          <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                                          <div class="h5 mb-0 font-weight-bold text-gray-800">{{effectifList}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +100,7 @@
                                           <div class="card-body">
                                             Effectif avec recommandation
                                             
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{effectifavecRList}}</div>
                                           </div>
                                         </div>
                                     
@@ -145,7 +114,7 @@
                                           <div class="card-body">
                                             Ineffectif
                                             
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ineffectifList}}</div>
                                           </div>
                                         </div>
                                     
@@ -206,11 +175,13 @@
                                 <div class="card-body">
                                     <div id="chart" >
                                         <apx-chart
-                                        [series]="RadialbarchartOptions.series"
-                                        [chart]="RadialbarchartOptions.chart"
-                                        [plotOptions]="RadialbarchartOptions.plotOptions"
-                                        [labels]="RadialbarchartOptions.labels"
-                                        [colors]="RadialbarchartOptions.colors"
+                                        [series]="ScorechartOptions.series"
+                                        [chart]="ScorechartOptions.chart"
+                                        [plotOptions]="ScorechartOptions.plotOptions"
+                                        [labels]="ScorechartOptions.labels"
+                                        [colors]="ScorechartOptions.colors"
+                                        [stroke]="ScorechartOptions.stroke"
+                                        [fill]="ScorechartOptions.fill"
                                         
                                         ></apx-chart>
                                     </div>
@@ -234,11 +205,11 @@
                             <div class="card-body col-xs-12 col-sm-12 col-md-12">
                                 <div id="chart" >
                                     <apx-chart
-                                    [series]="PiechartOptions.series"
-                                    [chart]="PiechartOptions.chart"
-                                    [labels]="PiechartOptions.labels"
-                                    [responsive]="PiechartOptions.responsive"
-                                    [colors]="PiechartOptions.colors"
+                                    [series]="PiechartOptions1.series"
+                                    [chart]="PiechartOptions1.chart"
+                                    [labels]="PiechartOptions1.labels"
+                                    [responsive]="PiechartOptions1.responsive"
+                                    [colors]="PiechartOptions1.colors"
 
                                     ></apx-chart>
                                 </div>
@@ -260,12 +231,14 @@
                             <div class="card-body">
                                 <div id="chart" >
                                     <apx-chart
-                                    [series]="RadialbarchartOptions.series"
-                                    [chart]="RadialbarchartOptions.chart"
-                                    [plotOptions]="RadialbarchartOptions.plotOptions"
-                                    [labels]="RadialbarchartOptions.labels"
-                                    [colors]="RadialbarchartOptions.colors"
-                                    
+                                    [series]="ScorechartOptions1.series"
+                                    [chart]="ScorechartOptions1.chart"
+                                    [plotOptions]="ScorechartOptions1.plotOptions"
+                                    [labels]="ScorechartOptions1.labels"
+                                    [colors]="ScorechartOptions1.colors"
+                                    [stroke]="ScorechartOptions1.stroke"
+                                    [fill]="ScorechartOptions1.fill"
+    
                                     ></apx-chart>
                                 </div>
                             </div>
@@ -288,11 +261,11 @@
                         <div class="card-body col-xs-12 col-sm-12 col-md-12">
                             <div id="chart" >
                                 <apx-chart
-                                [series]="PiechartOptions.series"
-                                [chart]="PiechartOptions.chart"
-                                [labels]="PiechartOptions.labels"
-                                [responsive]="PiechartOptions.responsive"
-                                [colors]="PiechartOptions.colors"
+                                [series]="PiechartOptions2.series"
+                                [chart]="PiechartOptions2.chart"
+                                [labels]="PiechartOptions2.labels"
+                                [responsive]="PiechartOptions2.responsive"
+                                [colors]="PiechartOptions2.colors"
 
                                 ></apx-chart>
                             </div>
@@ -314,11 +287,13 @@
                         <div class="card-body">
                             <div id="chart" >
                                 <apx-chart
-                                [series]="RadialbarchartOptions.series"
-                                [chart]="RadialbarchartOptions.chart"
-                                [plotOptions]="RadialbarchartOptions.plotOptions"
-                                [labels]="RadialbarchartOptions.labels"
-                                [colors]="RadialbarchartOptions.colors"
+                                [series]="ScorechartOptions2.series"
+                                [chart]="ScorechartOptions2.chart"
+                                [plotOptions]="ScorechartOptions2.plotOptions"
+                                [labels]="ScorechartOptions2.labels"
+                                [colors]="ScorechartOptions2.colors"
+                                [stroke]="ScorechartOptions2.stroke"
+                                [fill]="ScorechartOptions2.fill"
                                 
                                 ></apx-chart>
                             </div>

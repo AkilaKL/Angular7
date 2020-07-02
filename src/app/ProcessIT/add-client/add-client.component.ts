@@ -7,6 +7,9 @@ import { color } from 'highcharts';
 import { AddClient } from 'src/app/shared/add-client.model';
 import { Client } from 'src/app/shared/client.model';
 import { ClientService } from 'src/app/shared/client.service';
+import { UserService } from 'src/app/_services';
+import { User } from 'src/app/_models';
+import { first } from 'rxjs/operators';
 
 
 
@@ -16,6 +19,8 @@ import { ClientService } from 'src/app/shared/client.service';
   styleUrls: ['./add-client.component.css']
 })
 export class AddClientComponent implements OnInit {
+  currentUser: User;
+  users: User[]
   items = [
     {
       id: 1,
@@ -42,7 +47,7 @@ export class AddClientComponent implements OnInit {
   
   
 
-  constructor(public service: AddClientService, public tostr:ToastrService, public router: Router, public clientservice: ClientService) { }
+  constructor(public service: AddClientService, public tostr:ToastrService, public router: Router, public clientservice: ClientService, public userService: UserService) { }
   clientlist:Client[];
   @Input() inputData: Object;
   ngOnInit(): void {
@@ -56,9 +61,11 @@ resetForm(form?:NgForm){
   
   if (form!= null)
   form.resetForm();
-  this.service.formData ={
+  this.userService.fomData ={
+    IdSynthese :0,
+    Id:0,
+    user: this.currentUser,
     
-    Clientname:'',
     NomControlA: '',
     MACIN : '',
     MACDN :'',
@@ -102,10 +109,10 @@ resetForm(form?:NgForm){
 } 
 onSubmit(form:NgForm)
   {
-    this.service.postAddClient(form.value).subscribe(
+    this.userService.postAddClient(form.value).subscribe(
       res=>{this.resetForm(form);
         this.tostr.success('ajouté avec succès', 'Gestion des Process IT');
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('./dashboard');
     
     
     
@@ -124,7 +131,14 @@ onSubmit(form:NgForm)
     console.log(listma)
   }
 
-
+  getById(id:number){
+    this.userService.getById(id).toPromise().then(res =>this.currentUser= res as User);
+  }
+  private loadAllUsers() {
+    this.userService.getAll().pipe(first()).subscribe(users => {
+        this.users = users;
+    });
+}
   
   
 }

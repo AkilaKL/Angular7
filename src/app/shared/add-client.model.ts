@@ -1,8 +1,10 @@
+import { User } from '../_models';
 
 
 export class AddClient {
-    Clientname :string;
-    
+    IdSynthese :number;
+    Id :number;
+    user:User
     Date :Date;
     
     MCCD01 :string;
